@@ -1,0 +1,15 @@
+# Rime schema settings
+# encoding: utf-8
+
+patch:
+  ascii_composer/good_old_caps_lock: true
+  ascii_composer/switch_key/Caps_Lock: commit_code
+  speller/max_code_length: 4
+  speller/auto_select: true
+  speller/auto_select_unique_candidate: true
+  key_binder/bindings:
+    - { when: has_menu, accept: comma, send: comma }
+    - { when: has_menu, accept: period, send: period }
+  punctuator/half_shape:
+    "[": {commit: "【"}
+    "]": {commit: "】"}
