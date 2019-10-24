@@ -13,3 +13,19 @@ patch:
   punctuator/half_shape:
     "[": {commit: "【"}
     "]": {commit: "】"}
+  switches:
+    - name: ascii_mode
+      reset: 0
+      states: [ 中文, 西文 ]
+    - name: full_shape
+      states: [ 半角, 全角 ]
+    - name: simplification
+      states: [ 简体, 繁體 ]
+    - name: extended_charset
+      states: [ 常用, 增廣 ]
+    - name: ascii_punct
+      states: [ 。，, ．， ]
+  simplifier/opencc_config: s2t.json
+  engine/filters:
+    - simplifier
+    - uniquifier
