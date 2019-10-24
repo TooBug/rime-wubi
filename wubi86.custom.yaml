@@ -19,12 +19,13 @@ patch:
       states: [ 中文, 西文 ]
     - name: full_shape
       states: [ 半角, 全角 ]
-    - name: simplification
+    - name: zh_simp
       states: [ 简体, 繁體 ]
     - name: extended_charset
       states: [ 常用, 增廣 ]
     - name: ascii_punct
       states: [ 。，, ．， ]
+  simplifier/option_name: zh_simp
   simplifier/opencc_config: s2t.json
   engine/filters:
     - simplifier
