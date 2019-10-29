@@ -10,6 +10,7 @@ patch:
   key_binder/bindings:
     - { when: has_menu, accept: comma, send: comma }
     - { when: has_menu, accept: period, send: period }
+    - { when: always, accept: "Shift+space", toggle: full_shape }
   punctuator/half_shape:
     "[": {commit: "【"}
     "]": {commit: "】"}
