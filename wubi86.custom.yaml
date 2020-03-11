@@ -22,12 +22,17 @@ patch:
       states: [ 半角, 全角 ]
     - name: zh_simp
       states: [ 简体, 繁體 ]
+    - name: mars
+      states: [ 地球文, 火星文 ]
     - name: extended_charset
       states: [ 常用, 增廣 ]
     - name: ascii_punct
       states: [ 。，, ．， ]
-  simplifier/option_name: zh_simp
-  simplifier/opencc_config: s2t.json
   engine/filters:
-    - simplifier
+    - simplifier@st
+    - simplifier@mars
     - uniquifier
+  st/option_name: zh_simp
+  st/opencc_config: s2t.json
+  mars/option_name: mars
+  mars/opencc_config: mars.json
